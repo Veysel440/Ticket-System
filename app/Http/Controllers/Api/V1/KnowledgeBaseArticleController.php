@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 
-use App\Services\KnowledgeBaseArticleService;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\KnowledgeBase\KnowledgeBaseArticleStoreRequest;
+use App\Http\Requests\KnowledgeBase\KnowledgeBaseArticleUpdateRequest;
 use App\Http\Resources\KnowledgeBaseArticleResource;
-use Illuminate\Http\Request;
-use App\Http\Requests\KnowledgeBaseArticleStoreRequest;
-use App\Http\Requests\KnowledgeBaseArticleUpdateRequest;
+use App\Services\KnowledgeBaseArticleService;
 
 class KnowledgeBaseArticleController extends Controller
 {

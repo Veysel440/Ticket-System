@@ -10,23 +10,23 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(
-            \App\Repositories\TagRepositoryInterface::class,
+            \App\Interface\TagRepositoryInterface::class,
             \App\Repositories\TagRepository::class
         );
         $this->app->bind(
-            \App\Repositories\TicketCommentRepositoryInterface::class,
+            \App\Interface\TicketCommentRepositoryInterface::class,
             \App\Repositories\TicketCommentRepository::class
         );
         $this->app->bind(
-            \App\Repositories\KnowledgeBaseArticleRepositoryInterface::class,
+            \App\Interface\KnowledgeBaseArticleRepositoryInterface::class,
             \App\Repositories\KnowledgeBaseArticleRepository::class
         );
         $this->app->bind(
-            \App\Repositories\NotificationRepositoryInterface::class,
-            \App\Repositories\NotificationRepository::class
+            \App\Interface\NotificationInterface::class,
+            \App\Repositories\Notification::class
         );
         $this->app->bind(
-            \App\Repositories\UserRepositoryInterface::class,
+            \App\Interface\UserRepositoryInterface::class,
             \App\Repositories\UserRepository::class
         );
     }

@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\TagRepositoryInterface;
+use App\Interface\TagRepositoryInterface;
 
 class TagService
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Ticket;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TicketStoreRequest extends FormRequest
+class StoreTicketRequest extends FormRequest
 {
     public function authorize()
     {
-        return true;
+        return auth()->check();
     }
 
     public function rules()
@@ -19,6 +19,7 @@ class TicketStoreRequest extends FormRequest
             'tags'             => 'array',
             'tags.*'           => 'string',
             'assigned_user_id' => 'nullable|exists:users,id',
+            'priority'         => 'nullable|in:low,normal,high',
         ];
     }
 }

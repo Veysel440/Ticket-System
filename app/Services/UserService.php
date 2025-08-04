@@ -3,7 +3,7 @@
 namespace App\Services;
 
 
-use App\Repositories\UserRepositoryInterface;
+use App\Interface\UserRepositoryInterface;
 
 class UserService
 {

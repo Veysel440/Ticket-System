@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Interface\KnowledgeBaseArticleRepositoryInterface;
 use App\Models\KnowledgeBaseArticle;
 
 class KnowledgeBaseArticleRepository implements KnowledgeBaseArticleRepositoryInterface

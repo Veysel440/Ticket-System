@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Services\TicketCommentService;
+use App\Http\Controllers\Controller;
 use App\Http\Resources\TicketCommentResource;
+use App\Services\TicketCommentService;
 use Illuminate\Http\Request;
 
 class TicketCommentController extends Controller

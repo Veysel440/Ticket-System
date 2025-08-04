@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Interface;
 
-interface NotificationRepositoryInterface
+interface NotificationInterface
 {
     public function forUser($userId);
     public function markAsRead($id);

@@ -2,9 +2,10 @@
 
 namespace App\Repositories;
 
+use App\Interface\NotificationInterface;
 use App\Models\Notification;
 
-class NotificationRepository implements NotificationRepositoryInterface
+class NotificationRepository implements NotificationInterface
 {
     public function forUser($userId)
     {

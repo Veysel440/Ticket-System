@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
 
-use App\Services\NotificationService;
+use App\Http\Controllers\Controller;
 use App\Http\Resources\NotificationResource;
-use Illuminate\Http\Request;
+use App\Services\NotificationService;
 
 class NotificationController extends Controller
 {

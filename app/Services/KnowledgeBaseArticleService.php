@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\KnowledgeBaseArticleRepositoryInterface;
+use App\Interface\KnowledgeBaseArticleRepositoryInterface;
 
 class KnowledgeBaseArticleService
 {

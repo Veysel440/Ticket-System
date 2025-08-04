@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Interface\TicketCommentRepositoryInterface;
 use App\Models\TicketComment;
 
 class TicketCommentRepository implements TicketCommentRepositoryInterface

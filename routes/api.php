@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\TicketController;
-use App\Http\Controllers\TagController;
-use App\Http\Controllers\TicketCommentController;
-use App\Http\Controllers\KnowledgeBaseArticleController;
-use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\Api\V1\KnowledgeBaseArticleController;
+use App\Http\Controllers\Api\V1\NotificationController;
+use App\Http\Controllers\Api\V1\TagController;
+use App\Http\Controllers\Api\V1\TicketCommentController;
+use App\Http\Controllers\Api\V1\TicketController;
+use App\Http\Controllers\Api\V1\UserController;
 
 
 Route::middleware('auth:sanctum')->group(function () {

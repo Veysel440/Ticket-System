@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Repositories\TicketCommentRepositoryInterface;
+use App\Interface\TicketCommentRepositoryInterface;
 
 class TicketCommentService
 {
