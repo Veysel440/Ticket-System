@@ -3,9 +3,11 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\MailMessage;
 
-class TicketAssigned extends Notification
+class TicketAssigned extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -20,14 +22,15 @@ class TicketAssigned extends Notification
     {
         return [
             'ticket_id' => $this->ticket->id,
-            'message' => 'Yeni ticket size atandı.'
+            'message'   => 'Yeni bir ticket size atandı.',
         ];
     }
 
     public function toMail($notifiable)
     {
-        return (new \Illuminate\Notifications\Messages\MailMessage)
-            ->line('Yeni bir ticket size atandı.')
-            ->action('Ticketı Görüntüle', url('/tickets/' . $this->ticket->id));
+        return (new MailMessage)
+            ->subject('Yeni Ticket Ataması')
+            ->line('Yeni bir ticket size atandı!')
+            ->action('Ticketı Gör', url('/tickets/' . $this->ticket->id));
     }
 }
