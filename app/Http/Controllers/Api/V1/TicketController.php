@@ -41,8 +41,10 @@ class TicketController extends Controller
 
     public function update(TicketUpdateRequest $request, $id)
     {
-        $ticket = $this->service->update($id, $request->validated());
+        $ticket = $this->service->show($id);
         $this->authorize('update', $ticket);
+
+        $ticket = $this->service->update($id, $request->validated());
         return new TicketResource($ticket);
     }
 
